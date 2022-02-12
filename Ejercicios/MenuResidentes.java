@@ -7,6 +7,10 @@ public class MenuResidentes {
         Scanner teclado =new Scanner(System.in);
         int opción;
 
+        Residentes r1=new Residentes("123456789", "Pablo","Rodriguez",4,8);
+        Residentes r2=new Residentes("123456788", "Rafael","Alonso",8,5);
+        Residentes r3=new Residentes("123456781", "Pablo","Alvarez",10,0);
+
         do {
 
             System.out.println(" ***** GESTIÓN DE RESIDENTES ***** ");
@@ -23,12 +27,29 @@ public class MenuResidentes {
             switch (opción){
 
                 case 1:
+                    String residente=teclado.nextLine();
+
+                    while (""==residente){
+
+                        System.out.println("Introduce el nombre del residente: ");
+                        residente=teclado.nextLine();
+                    }
+                    System.out.println("El nombre del residente es " + residente.toUpperCase());
+                    System.out.println();
+                    System.out.println();
+                    System.out.println();
 
                     break;
                 case 2:
+                    System.out.println("Residente 1 " +'\n' + r1);
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("Residente 2 " +'\n' + r2);
+                    System.out.println("----------------------------------------------------");
+                    System.out.println("Residente 3 " +'\n' + r3);
 
                     break;
                 case 3:
+
                     break;
                 case 4:
                     break;

@@ -62,12 +62,11 @@ public class Residentes {
 
     @Override
     public String toString() {
-        return "Residentes{" +
-                "dni='" + dni + '\'' +
-                ", nombre='" + nombre + '\'' +
-                ", apellidos='" + apellidos + '\'' +
-                ", nºHabitacion=" + nºHabitacion +
-                ", incidencias=" + incidencias +
-                '}';
+        return
+                "dni='" + dni + '\n' +
+                "nombre='" + nombre + '\n' +
+                "apellidos='" + apellidos + '\n' +
+                "nºHabitacion=" + nºHabitacion + '\n' +
+                "incidencias=" + incidencias;
     }
 }
