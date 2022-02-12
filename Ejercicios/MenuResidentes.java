@@ -7,10 +7,6 @@ public class MenuResidentes {
         Scanner teclado =new Scanner(System.in);
         int opción;
 
-        Residentes r1=new Residentes("123456789", "Pablo","Rodriguez",4,8);
-        Residentes r2=new Residentes("123456788", "Rafael","Alonso",8,5);
-        Residentes r3=new Residentes("123456781", "Pablo","Alvarez",10,0);
-
         do {
 
             System.out.println(" ***** GESTIÓN DE RESIDENTES ***** ");
@@ -22,37 +18,34 @@ public class MenuResidentes {
             System.out.println(" 0) Salir del menú");
             System.out.println();
             System.out.println("Selecciona una opción :");
+
             opción=teclado.nextInt();
 
             switch (opción){
-
                 case 1:
-                    String residente=teclado.nextLine();
 
-                    while (""==residente){
+                    Residentes r1 = new Residentes("");
 
-                        System.out.println("Introduce el nombre del residente: ");
-                        residente=teclado.nextLine();
-                    }
-                    System.out.println("El nombre del residente es " + residente.toUpperCase());
-                    System.out.println();
-                    System.out.println();
-                    System.out.println();
+                    System.out.println(r1.DNI());
+                    System.out.println(r1.nombreyapellido());
+                    System.out.println(r1.nºHabitacion());
+                    System.out.println(r1.nºIncidencias());
 
                     break;
                 case 2:
-                    System.out.println("Residente 1 " +'\n' + r1);
-                    System.out.println("----------------------------------------------------");
-                    System.out.println("Residente 2 " +'\n' + r2);
-                    System.out.println("----------------------------------------------------");
-                    System.out.println("Residente 3 " +'\n' + r3);
+
+                    Residentes r2 = new Residentes("123456789", "Paco", "León", 14,1);
+                    Residentes r3 = new Residentes("123456787", "Lucas", "León", 12,0);
+
+                    System.out.println(r2);
+                    System.out.println(r3);
 
                     break;
+
                 case 3:
 
-                    break;
-                case 4:
-                    break;
+
+
             }
         } while (opción==1 || opción==2 ||opción==3 || opción==4); //Si se cumple la condicion se repite hasta que no se cumpla
         System.out.println("Has salido del menu");
