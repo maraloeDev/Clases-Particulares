@@ -10,7 +10,7 @@ import java.util.*;
 /**
  *
  * @author RAFAEL TRECEÑO RODRÍGUEZ (rafa13o)
- * @version 1.0
+ * @version 1.1
  */
 public class ResidenteSolucion {
 
@@ -29,10 +29,11 @@ public class ResidenteSolucion {
         do { // Bucle para repetir todo el programa hasta que el usuario introduzca un 0
             do { // Bucle para repetir el menú hasta que el usuario introduzca una opción válida
                 opcionSeleccionada = menu();
-            } while (opcionSeleccionada < 0 || opcionSeleccionada > 5);
+            } while (opcionSeleccionada < 0 || opcionSeleccionada > 4);
 
             opcionSeleccionada(opcionSeleccionada);
         } while (opcionSeleccionada != 0);
+        miScanner.close(); // Cierro el Scanner al finalizar el programa
     }
 
     /**
