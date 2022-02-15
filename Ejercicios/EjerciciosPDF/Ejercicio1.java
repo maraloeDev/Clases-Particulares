@@ -1,6 +1,6 @@
 package EjerciciosPDF;
 
-public class Ejercicio1PDF {
+public class Ejercicio1 {
 
     public static void main(String[] args) {
         double balance = 0;
