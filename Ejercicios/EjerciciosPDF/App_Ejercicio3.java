@@ -8,7 +8,7 @@ public class App_Ejercicio3 {
 
     public static void main(String[] args) {
 
-        Ejercicio3 ataque = new Ejercicio3(true,false);
+        Ejercicio3 ataque = new Ejercicio3(true,true);
         Ejercicio3 huye   = new Ejercicio3(true,false);
         Ejercicio3 Libre  = new Ejercicio3(false,false);
 
@@ -19,6 +19,7 @@ public class App_Ejercicio3 {
         System.out.println("Selecciona una opción");
         int opcion=teclado.nextInt();
 do {
+
     switch (opcion){
 
         case 1 :
