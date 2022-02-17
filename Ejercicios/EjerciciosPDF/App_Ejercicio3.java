@@ -12,13 +12,15 @@ public class App_Ejercicio3 {
         Ejercicio3 huye   = new Ejercicio3(true,false);
         Ejercicio3 Libre  = new Ejercicio3(false,false);
 
-        System.out.println( "1 Atacar" + '\n'
-                +           "2 huir"   + '\n'
-                +           "3 Libre de peligro");
-        System.out.println("------------------------------");
-        System.out.println("Selecciona una opción");
-        int opcion=teclado.nextInt();
+
+        int opcion;
 do {
+    System.out.println( "1 Atacar" + '\n'
+            +           "2 huir"   + '\n'
+            +           "3 Libre de peligro");
+    System.out.println("------------------------------");
+    System.out.println("Selecciona una opción");
+    opcion=teclado.nextInt();
 
     switch (opcion){
 
@@ -36,16 +38,12 @@ do {
         break;
 
     }
-}while (opcion!=0);
+}while (opcion==1 || opcion==2 || opcion==3);
         System.out.println("Selecciona una opcion : " + '\n'
                 + "1 Atacar" + '\n'
                 + "2 huir" + '\n'
                 + "3 Libre de peligro");
         System.out.println("------------------------------");
-
-        opcion=teclado.nextInt();
-
-
 
     }
 }
