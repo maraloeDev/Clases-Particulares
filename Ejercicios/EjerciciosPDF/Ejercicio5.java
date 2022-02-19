@@ -45,7 +45,7 @@ public class Ejercicio5 {
                 System.out.println("“Dormir!”");
                 break;
 
-            default:
+            default
 
                 System.out.println("No se ha introducido el valor correcto entre 1 y 7");
         }*/
