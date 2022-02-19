@@ -1,4 +1,4 @@
-package EjerciciosPDF;
+package EjerciciosPDF.EjerciciosCondicionales;
 
 import java.util.Scanner;
 

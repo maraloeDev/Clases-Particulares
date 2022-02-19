@@ -1,4 +1,4 @@
-package EjerciciosPDF;
+package EjerciciosPDF.EjerciciosCondicionales;
 
 public class Ejercicio6 {
 
@@ -9,7 +9,7 @@ public class Ejercicio6 {
         if (rewinding) {
             double rewindAmount = 0.1;
         }
-        playbackPosition = playbackPosition - rewindAmount;
+        /*playbackPosition = playbackPosition - rewindAmount;*/
 
         //EL ERROR ES QUE NO HAY NINGUNA VARIABLE QUE SE LLAME rewindAmount
     }

@@ -1,4 +1,4 @@
-package EjerciciosPDF;
+package EjerciciosPDF.EjerciciosCondicionales;
 
 public class Ejercicio4 {
 
