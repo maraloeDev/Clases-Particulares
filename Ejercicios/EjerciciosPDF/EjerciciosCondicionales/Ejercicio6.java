@@ -11,6 +11,6 @@ public class Ejercicio6 {
         }
         /*playbackPosition = playbackPosition - rewindAmount;*/
 
-        //EL ERROR ES QUE NO HAY NINGUNA VARIABLE QUE SE LLAME rewindAmount
+        //EL ERROR ES QUE LA VARIABLE ES PERTENECIENTE A LA SENTENCIA IF
     }
 }
