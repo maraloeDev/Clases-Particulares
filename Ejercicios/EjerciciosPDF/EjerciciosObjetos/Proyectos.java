@@ -4,19 +4,19 @@ public class Proyectos {
 
     //ATTRIBUTES
 
-    protected int codigoProyecto;
-    protected String nombre;
-    protected String coordinador;
+    public int codigoProyecto;
+    public Persona persona;
 
     //CONSTRUCTORS
 
-    public Proyectos(int codigoProyecto, String nombre, String coordinador) {
+    public Proyectos(int codigoProyecto, Persona persona) {
         this.codigoProyecto = codigoProyecto;
-        this.nombre = nombre;
-        this.coordinador = coordinador;
+        this.persona = persona;
+
+        // CREARE UN CONSTRUCTOR PARA LA CLASE PERSONA, DEBIDO A QUE EL ATRIBUTO PERSONA LO OBTENGO DE OTRA CLASE
     }
 
-    //METHODS GETTER AND SETTER
+    //METHODS OF UTILITY
 
     public int getCodigoProyecto() {
         return codigoProyecto;
@@ -26,30 +26,19 @@ public class Proyectos {
         this.codigoProyecto = codigoProyecto;
     }
 
-    public String getNombre() {
-        return nombre;
+    public Persona getPersona() {
+        return persona;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
-    }
-
-    public String getCoordinador() {
-        return coordinador;
-    }
-
-    public void setCoordinador(String coordinador) {
-        this.coordinador = coordinador;
+    public void setPersona(Persona persona) {
+        this.persona = persona;
     }
 
     @Override
     public String toString() {
         return "Proyectos{" +
                 "codigoProyecto=" + codigoProyecto +
-                ", nombre='" + nombre + '\'' +
-                ", coordinador='" + coordinador + '\'' +
+                ", persona=" + persona +
                 '}';
     }
-
-    //METHODS OF UTILITY
 }
