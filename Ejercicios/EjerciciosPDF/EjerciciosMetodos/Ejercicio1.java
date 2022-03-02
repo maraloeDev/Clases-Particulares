@@ -19,7 +19,11 @@ public class Ejercicio1 {
         System.out.println( "--------------DIVISIÓN-------------" + "\n" +
                 a + " / " + b + " = " +  division(24,5));
 
+        System.out.println( "--------------MODULO-------------" + "\n" +
+                a + " * " + b + " = " +  modulo(24, 5));
+
     }
+
     public static int suma(int a, int b) {
 
         int total = a + b;
