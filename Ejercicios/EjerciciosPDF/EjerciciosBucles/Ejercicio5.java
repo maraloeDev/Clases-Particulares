@@ -1,3 +1,4 @@
+/*
 package EjerciciosPDF.EjerciciosBucles;
 
 public class Ejercicio5 {
@@ -25,3 +26,4 @@ do {
 
     }
 }
+*/
