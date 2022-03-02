@@ -59,7 +59,16 @@ return total;
         return total;
     }
 
-    /*public static int MayoryMenor(int a, int b){
+    public void MayoryMenor(int a, int b){
 
-    }*/
+        if (a > b){
+
+            System.out.println("a es mayor que b");
+
+        } else{
+            System.out.println("b es menor que b");
+        }
+
+
+    }
 }
