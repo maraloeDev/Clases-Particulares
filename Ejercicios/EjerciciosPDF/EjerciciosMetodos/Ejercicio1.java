@@ -58,4 +58,8 @@ return total;
         int total = a % b;
         return total;
     }
+
+    /*public static int MayoryMenor(int a, int b){
+
+    }*/
 }
