@@ -69,6 +69,5 @@ return total;
             System.out.println("b es menor que b");
         }
 
-
     }
 }

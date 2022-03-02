@@ -26,14 +26,14 @@ public class Bucles {
                 case 1:
                     System.out.println("Su saldo es de 1000 €");
 
-                    Metodos_Bucles b1 = new Metodos_Bucles();
+                    AppBucles b1 = new AppBucles();
                     System.out.println(b1.metodo1(1));
                 break;
 
                 case 2:
                     System.out.println("A quien quiere realizar la transferencia");
 
-                    Metodos_Bucles b2 = new Metodos_Bucles();
+                    AppBucles b2 = new AppBucles();
                     System.out.println(b2.metodo2(3));
                 break;
 
@@ -41,7 +41,7 @@ public class Bucles {
 
                     System.out.println("Consultar/cambiar los datos personales");
 
-                    Metodos_Bucles b3 = new Metodos_Bucles();
+                    AppBucles b3 = new AppBucles();
                     System.out.println(b3.metodo3(7));
                 break;
 
@@ -49,14 +49,14 @@ public class Bucles {
 
                     System.out.println("Solicitar un préstamo");
 
-                    Metodos_Bucles b4 = new Metodos_Bucles();
+                    AppBucles b4 = new AppBucles();
                     System.out.println(b4.metodo4(14));
 
                 break;
 
                 case 5:
 
-                    Metodos_Bucles b5 = new Metodos_Bucles();
+                    AppBucles b5 = new AppBucles();
                     System.out.println(b5.metodo5(10));
                     break;
 

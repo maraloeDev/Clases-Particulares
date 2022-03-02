@@ -1,6 +1,6 @@
 package Ejercicio2;
 
-public class Metodos_Bucles {
+public class AppBucles {
 
     public  int metodo1(int q){
         return  0;
