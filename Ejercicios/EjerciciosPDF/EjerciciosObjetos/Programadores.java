@@ -16,7 +16,7 @@ public class Programadores {
 
     //CONSTRUCTORS
 
-    public Programadores(String dni, String nombre, String apellidos, String especialidad, LocalDate fechaDeAlta, LocalDate fechaDeBaja, char tipo) {
+    public Programadores(String dni, String nombre, String apellidos, String especialidad) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -98,5 +98,14 @@ public class Programadores {
     }
 
     //METHODS OF UTILITY
+
+    public static void altaTrabajador(){
+
+Programadores alta = new Programadores("111111","Paula","Gomez","Java");
+    }
+
+    public static void bajaTrabajador(){
+
+    }
 
 }
