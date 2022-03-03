@@ -16,7 +16,7 @@ public class Programadores {
 
     //CONSTRUCTORS
 
-    public Programadores(String dni, String nombre, String apellidos, String especialidad) {
+    public Programadores(String dni, String nombre, String apellidos, String especialidad, LocalDate fechaDeAlta, LocalDate fechaDeBaja, char tipo) {
         this.dni = dni;
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -25,6 +25,14 @@ public class Programadores {
         this.fechaDeBaja = fechaDeBaja;
         this.tipo = tipo;
     }
+
+    public Programadores (String dni, String nombre, String apellidos){ //CONSTRUCTOR PARA DAR DE ALTA AL TRABAJADOR
+
+        this.dni=dni;
+        this.nombre=nombre;
+        this.apellidos=apellidos;
+    }
+
 
     //METHODS GETTER AND SETTER
 
@@ -101,7 +109,7 @@ public class Programadores {
 
     public static void altaTrabajador(){
 
-Programadores alta = new Programadores("111111","Paula","Gomez","Java");
+
     }
 
     public static void bajaTrabajador(){
