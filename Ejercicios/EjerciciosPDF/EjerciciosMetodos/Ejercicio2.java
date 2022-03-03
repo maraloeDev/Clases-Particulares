@@ -1,9 +1,12 @@
 package EjerciciosPDF.EjerciciosMetodos;
 
+
 public class Ejercicio2 {
 
-        public  int metodo1(int q){
-                return  0;
+        public  double metodo1(int q) {
+
+               double saldo = q;
+               return saldo;
         }
 
         public  int metodo2(int w){

@@ -25,10 +25,10 @@ public class Ejercicio2App {
             switch (opcion){
 
                 case 1:
-                    System.out.println("Su saldo es de 1000 €");
 
                     Ejercicio2 b1 = new Ejercicio2();
-                    System.out.println(b1.metodo1(1));
+
+                    System.out.println("Tu saldo es :" + b1.metodo1(1000));
                     break;
 
                 case 2:
