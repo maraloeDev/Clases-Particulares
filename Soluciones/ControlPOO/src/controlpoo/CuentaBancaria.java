@@ -34,6 +34,9 @@ public class CuentaBancaria {
         this.fechaApertura = LocalDate.now();
     }
 
+    public CuentaBancaria(String entidad, String cuenta, controlpoo.Cliente elCliente) {
+    }
+
     public String getCodigoCuentaCliente() {
         return codigoCuentaCliente;
     }

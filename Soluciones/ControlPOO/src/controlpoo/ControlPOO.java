@@ -25,9 +25,10 @@ public class ControlPOO {
          */
         
          // Crear un núevo cliente para pasarselo a la cuenta bancaria como titular
-        Cliente elCliente = new Cliente(0, "111-A", "Francisco", "Pérez", "Carrer de las Alforjas Viejas, 3", "+34654456456");
+        controlpoo.Cliente elCliente = new controlpoo.Cliente(0, "111-A", "Francisco", "Pérez", "Carrer de las Alforjas Viejas, 3", "+34654456456");
         // Crear la cuenta bancaria
-        CuentaBancaria laCuenta = new CuentaBancaria("00781641", "3080053174", elCliente);
+        controlpoo.CuentaBancaria laCuenta;
+        laCuenta = new controlpoo.CuentaBancaria("00781641", "3080053174", elCliente);
 
         // Probando los métodos
         System.out.println("Datos Cuenta: \n"+laCuenta);

@@ -9,7 +9,7 @@ package ej2bucles;
  *
  * @author RAFAEL TRECEÑO RODRÍGUEZ (rafa13o - rafaeltreceno.es)
  */
-class Prestamo {
+public class Prestamo {
 
     // ---- PROPIEDADES DEL OBJETO ----
     private int idPrestamo;

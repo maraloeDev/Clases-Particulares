@@ -3,7 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package ej2bucles;
+package Ej2Bucles.src.ej2bucles;
+
+import ej2bucles.Prestamo;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;
@@ -100,7 +102,7 @@ public class Ej2Bucles {
      * Para que todo quede bien, he creado dos objetos (CuentaBancaria y Prestamo)
      */
     
-    static CuentaBancaria laCuenta = new CuentaBancaria("111A", "TU NOMBRE", 1434.18f, false, null);
+    static ej2bucles.CuentaBancaria laCuenta = new ej2bucles.CuentaBancaria("111A", "TU NOMBRE", 1434.18f, false, null);
     
     
     private static void metodo1() {
