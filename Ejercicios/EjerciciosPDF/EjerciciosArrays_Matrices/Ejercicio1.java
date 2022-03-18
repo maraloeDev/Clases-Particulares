@@ -1,4 +1,4 @@
-package EjerciciosArrays_Matrices;
+package EjerciciosPDF.EjerciciosArrays_Matrices;
 
 import java.lang.reflect.Array;
 import java.util.ArrayList;
@@ -19,6 +19,7 @@ public class Ejercicio1 {
 
     public static void introducirDatos() {
 
+
         arrayDeAlimentos[0] = "Hamburguesa";
         arrayDeAlimentos[1] = "Perrito Caliente";
         arrayDeAlimentos[2] = "Croquetas";
@@ -28,12 +29,17 @@ public class Ejercicio1 {
 
     public static void mostrarDatos() {
 
-
         System.out.println(Arrays.toString(arrayDeAlimentos));
     }
 
     public static String clonarArray() {
-// Completar el método
+
+        System.out.println();
+        System.out.println("CLONADO");
+        System.out.println();
+
+        System.out.println(Arrays.toString(arrayDeAlimentos.clone()));
+
         return "";
     }
 
