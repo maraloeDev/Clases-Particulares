@@ -38,7 +38,7 @@ public class Ejercicio1 {
         System.out.println("CLONADO");
         System.out.println();
 
-        System.out.println(Arrays.toString(arrayDeAlimentos.clone()));
+        String[] arrayClonado = arrayDeAlimentos.clone();
 
         return "";
     }
