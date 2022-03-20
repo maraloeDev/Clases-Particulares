@@ -40,7 +40,7 @@ public class Ejercicio1 {
 
         String[] arrayClonado = arrayDeAlimentos.clone();
 
-        return "";
+        return Arrays.toString(arrayClonado);
     }
 
     public static void clonarArrayV2() {
