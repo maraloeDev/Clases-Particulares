@@ -1,3 +1,4 @@
+package src;
 
 import java.io.File;
 import java.io.FileNotFoundException;
@@ -53,5 +54,8 @@ public class Escritura_medianteTeclado {
         } catch (IOException ex) {
             Logger.getLogger(Lectura.class.getName()).log(Level.SEVERE, null, ex);
         }
+    }
+
+    private static class Lectura {
     }
 }
