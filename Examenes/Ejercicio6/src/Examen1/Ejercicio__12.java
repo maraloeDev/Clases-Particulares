@@ -4,6 +4,8 @@
  */
 package Examen1;
 
+import static Examen1.Ejercicio_6.teclado;
+
 /**
  *
  * @author Eduardo
@@ -11,6 +13,9 @@ package Examen1;
 public class Ejercicio__12 {
     
     public static void main(String[] args) {
+        
+        
+        int numero=teclado.nextInt();
         
         
     }
