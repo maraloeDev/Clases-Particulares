@@ -4,13 +4,13 @@
  */
 package Examen1;
 
-import static Examen1.Ejercicio6.teclado;
+import static Examen1.Ejercicio_6.teclado;
 
 /**
  *
  * @author Eduardo
  */
-public class Ejercicio7 {
+public class Ejercicio_7 {
 
     public static void main(String[] args) {
 

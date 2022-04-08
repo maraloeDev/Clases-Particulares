@@ -10,7 +10,7 @@ import java.util.Scanner;
  *
  * @author Eduardo
  */
-public class Ejercicio6 {
+public class Ejercicio_6 {
     public static Scanner teclado = new Scanner(System.in);
     public static void main(String[] args) {
         
