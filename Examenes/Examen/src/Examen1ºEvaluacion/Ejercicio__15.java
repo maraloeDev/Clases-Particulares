@@ -10,7 +10,7 @@ import static Examen1ºEvaluacion.Ejercicio_6.teclado;
  *
  * @author Eduardo
  */
-public class Ejercicio__14 {
+public class Ejercicio__15 {
 
     public static void main(String[] args) {
 
@@ -18,16 +18,12 @@ public class Ejercicio__14 {
 
         int numero = teclado.nextInt();
 
-        for (int i = 0; i < 25; i++) {
-            if (numero < 25) {
+        int total = numero + 1;
+        int numAnterior = numero - 1;
+        System.out.println("El siguiente numero al introducido es el: " + total);
 
-                System.out.println(numero - i);
-            }
+        System.out.println("El anterior numero al introducido es el : " + numAnterior);
 
-        }
-        if (numero == 25) {
-
-            System.out.println("El numero es 25");
-        }
     }
+
 }
