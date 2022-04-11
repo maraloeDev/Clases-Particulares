@@ -17,9 +17,16 @@ public class Ejercicio__15 {
         System.out.println("Escribe un numero entre el 1 y el 50: ");
 
         int numero = teclado.nextInt();
-
+        /**
+         * Creación de 2 variables, una suma el numero indicado por el usuario,
+         * le aumenta una cantidad
+         *
+         * la 2da resta el numero indicado por el usuario, le disminuye una
+         * cantidad
+         */
         int total = numero + 1;
         int numAnterior = numero - 1;
+
         System.out.println("El siguiente numero al introducido es el: " + total);
 
         System.out.println("El anterior numero al introducido es el : " + numAnterior);

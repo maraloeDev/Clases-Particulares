@@ -6,9 +6,6 @@ package Examen1ºEvaluacion;
 
 import static Examen1ºEvaluacion.Ejercicio_6.teclado;
 
-
-
-
 /**
  *
  * @author Eduardo
@@ -16,6 +13,15 @@ import static Examen1ºEvaluacion.Ejercicio_6.teclado;
 public class Ejercicio__13 {
 
     public static void main(String[] args) {
+        
+        /**
+         * 
+         * hay 2 condiciones, el if dice que es par, si no es par, pasa a 
+         * else if, tiene que cumplir 2 condiciones( si el numero
+         * que ha introducido el usuario entre 2 es igual a 1, &&(op. logico,
+         * se tienen que cumplir las 2 condiciones si o si)
+         * si el numero entre 1 ==0)
+         */
 
         System.out.println("Introduce un numero: ");
         int numero = teclado.nextInt();

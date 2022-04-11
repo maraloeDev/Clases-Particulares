@@ -6,8 +6,6 @@ package Examen1ºEvaluacion;
 
 import static Examen1ºEvaluacion.Ejercicio_6.teclado;
 
-
-
 /**
  *
  * @author Eduardo

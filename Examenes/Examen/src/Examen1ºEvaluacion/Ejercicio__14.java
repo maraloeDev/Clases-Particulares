@@ -18,6 +18,12 @@ public class Ejercicio__14 {
 
         int numero = teclado.nextInt();
 
+        /**
+         *
+         * Si el numero introducido es menor que 25, se restara 1 hasta que la
+         * condicion del for, se cumpla, y si es igual, que el numero indicado
+         * (25), que lo muestre por pantalla
+         */
         for (int i = 0; i < 25; i++) {
             if (numero < 25) {
 
