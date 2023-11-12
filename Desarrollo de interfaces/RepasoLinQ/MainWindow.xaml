@@ -1,0 +1,16 @@
+﻿<Window x:Class="RepasoLinQ.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:RepasoLinQ"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+        <StackPanel VerticalAlignment="Center" HorizontalAlignment="Center">
+            <Button Content="Mostrar Resultados" Click="MostrarResultados_Click" />
+            <ListBox x:Name="lbresultadosListBox" Margin="0,10,0,0" Width="691" Height="290" />
+        </StackPanel>
+
+    </Grid>
+</Window>
