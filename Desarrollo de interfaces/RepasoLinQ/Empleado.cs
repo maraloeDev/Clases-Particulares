@@ -11,11 +11,11 @@ namespace RepasoLinQ
 
         public string nombre { get; set; }
         public string cargo { get; set; }
-        public int id{ get; set; }
+        public int id { get; set; }
         public double salario { get; set; }
         public int empresa { get; set; }
 
-    public Empleado(string nombre, string cargo, int id, double salario, int empresa)
+        public Empleado(string nombre, string cargo, int id, double salario, int empresa)
         {
             this.nombre = nombre;
             this.cargo = cargo;
@@ -26,8 +26,7 @@ namespace RepasoLinQ
 
         public Empleado()
         {
-            
+
         }
     }
-
 }

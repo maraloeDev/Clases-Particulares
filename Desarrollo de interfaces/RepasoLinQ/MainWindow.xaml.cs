@@ -5,25 +5,32 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows;
+using System.Windows.Controls;
+using System.Windows.Data;
+using System.Windows.Documents;
+using System.Windows.Input;
+using System.Windows.Media;
+using System.Windows.Media.Imaging;
+using System.Windows.Navigation;
+using System.Windows.Shapes;
 
 namespace RepasoLinQ
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    /// 
-            // IEnumerable <T> (La T representa cualquier tipo de dato), es una estrucura comun, y permite es iterar usando un foreach
     public partial class MainWindow : Window
     {
 
-    public ArrayList empresas = new ArrayList();
-    public ArrayList empleados = new ArrayList();
+        public ArrayList empresas = new ArrayList();
+        public ArrayList empleados = new ArrayList();
 
         public MainWindow()
         {
             InitializeComponent();
             CrearConsultasConObjetos();
         }
+
         private void CrearConsultasConObjetos()
         {
             //----------------------------EMPRESA-------------------------------------------------
@@ -101,7 +108,7 @@ namespace RepasoLinQ
                 lbresultadosListBox.Items.Add(item);
             }
 
-           
+
         }
 
         private void Ejemplo02()
@@ -142,7 +149,7 @@ namespace RepasoLinQ
                             on listaEmpleados.id equals listaEmpresa.id
                             select new
                             {
-                                
+
                                 NombreEmpresa = listaEmpresa.nombre,
                                 Nombre = listaEmpleados.nombre,
                                 Cargo = listaEmpleados.cargo,
@@ -152,22 +159,20 @@ namespace RepasoLinQ
             lbresultadosListBox.Items.Clear();
             foreach (var item in resultado)
             {
-                lbresultadosListBox.Items.Add($"\t Cargo: {item.Cargo} - Empresa: {item.NombreEmpresa}");
+                lbresultadosListBox.Items.Add($" Cargo: {item.Cargo} - Empresa: {item.NombreEmpresa}");
 
                 foreach (var item2 in resultado)
                 {
-                    lbresultadosListBox.Items.Add( $"\n Nombre:{item2.Nombre} - Salario: {item2.Salario}");
+                    lbresultadosListBox.Items.Add($"\t Nombre:{item2.Nombre} - Salario: {item2.Salario}");
                 }
             }
         }
 
         private void MostrarResultados_Click(object sender, RoutedEventArgs e)
         {
-
             // Ejemplo01();
             // Ejemplo02();
             Ejercicio01LinQ();
-           
         }
     }
 }

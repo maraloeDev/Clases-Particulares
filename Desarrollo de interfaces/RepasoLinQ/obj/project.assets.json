@@ -13,11 +13,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Eduardo.JMS\\OneDrive\\RepasoLinQ\\RepasoLinQ\\RepasoLinQ.csproj",
+      "projectUniqueName": "C:\\Users\\Eduardo.JMS\\Desktop\\RepasoLinQ\\RepasoLinQ.csproj",
       "projectName": "RepasoLinQ",
-      "projectPath": "C:\\Users\\Eduardo.JMS\\OneDrive\\RepasoLinQ\\RepasoLinQ\\RepasoLinQ.csproj",
+      "projectPath": "C:\\Users\\Eduardo.JMS\\Desktop\\RepasoLinQ\\RepasoLinQ.csproj",
       "packagesPath": "C:\\Users\\Eduardo.JMS\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Eduardo.JMS\\OneDrive\\RepasoLinQ\\RepasoLinQ\\obj\\",
+      "outputPath": "C:\\Users\\Eduardo.JMS\\Desktop\\RepasoLinQ\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\Eduardo.JMS\\AppData\\Roaming\\NuGet\\NuGet.Config"

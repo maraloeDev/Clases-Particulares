@@ -11,6 +11,5 @@
             <Button Content="Mostrar Resultados" Click="MostrarResultados_Click" />
             <ListBox x:Name="lbresultadosListBox" Margin="0,10,0,0" Width="691" Height="290" />
         </StackPanel>
-
     </Grid>
 </Window>
