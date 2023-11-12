@@ -9,7 +9,7 @@ namespace RepasoLinQ
     internal class Empresa
     {
         public int id { get; set; }
-        public string nombre { get; set; }
+        public string nombreEmpresa { get; set; }
 
         public Empresa()
         {
@@ -19,7 +19,7 @@ namespace RepasoLinQ
         public Empresa(int id, string nombre)
         {
             this.id = id;
-            this.nombre = nombre;
+            this.nombreEmpresa = nombre;
         }
     }
 }

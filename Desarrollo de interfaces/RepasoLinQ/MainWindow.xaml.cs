@@ -35,11 +35,11 @@ namespace RepasoLinQ
         {
             //----------------------------EMPRESA-------------------------------------------------
 
-            Empresa empresa1 = new Empresa { id = 1, nombre = "ABC Corporation" };
-            Empresa empresa2 = new Empresa { id = 2, nombre = "XYZ Ltda" };
-            Empresa empresa3 = new Empresa { id = 3, nombre = "Tech Innovators Inc." };
-            Empresa empresa4 = new Empresa { id = 4, nombre = "Global Services Co." };
-            Empresa empresa5 = new Empresa { id = 5, nombre = "Innovate Solutions Ltd." };
+            Empresa empresa1 = new Empresa { id = 1, nombreEmpresa = "ABC Corporation" };
+            Empresa empresa2 = new Empresa { id = 2, nombreEmpresa = "XYZ Ltda" };
+            Empresa empresa3 = new Empresa { id = 3, nombreEmpresa = "Tech Innovators Inc." };
+            Empresa empresa4 = new Empresa { id = 4, nombreEmpresa = "Global Services Co." };
+            Empresa empresa5 = new Empresa { id = 5, nombreEmpresa = "Innovate Solutions Ltd." };
             empresas.Add(empresa2);
             empresas.Add(empresa3);
             empresas.Add(empresa4);
@@ -121,7 +121,7 @@ namespace RepasoLinQ
                              where datosEmpresa.id == 3
                              select new
                              {
-                                 NombreEmpresa = datosEmpresa.nombre,
+                                 NombreEmpresa = datosEmpresa.nombreEmpresa,
                                  NombreEmpleado = datosEmpleado.nombre,
                                  SalarioEmpleado = datosEmpleado.salario,
                                  CargoEmpleado = datosEmpleado.cargo
@@ -136,6 +136,7 @@ namespace RepasoLinQ
 
         private void Ejercicio01LinQ()
         {
+            ArrayList datosMostrar = new ArrayList();
 
             /* Teniendo la lista de empleados y empresas, tendrás que agrupar las personas con el mismo cargo para mostrarlas de la siguiente forma:
 
@@ -149,21 +150,21 @@ namespace RepasoLinQ
                             on listaEmpleados.id equals listaEmpresa.id
                             select new
                             {
-
-                                NombreEmpresa = listaEmpresa.nombre,
                                 Nombre = listaEmpleados.nombre,
+                                NombreEmpresa = listaEmpresa.nombreEmpresa,
                                 Cargo = listaEmpleados.cargo,
                                 Salario = listaEmpleados.salario
-                            };
+                            } into consulta
+                            group consulta by consulta.Cargo;
 
             lbresultadosListBox.Items.Clear();
-            foreach (var item in resultado)
+            foreach (IGrouping<string, dynamic> grupo in resultado)
             {
-                lbresultadosListBox.Items.Add($" Cargo: {item.Cargo} - Empresa: {item.NombreEmpresa}");
+                lbresultadosListBox.Items.Add($"Cargo: {grupo.Key}");
 
-                foreach (var item2 in resultado)
+                foreach (var item2 in grupo)
                 {
-                    lbresultadosListBox.Items.Add($"\t Nombre:{item2.Nombre} - Salario: {item2.Salario}");
+                    lbresultadosListBox.Items.Add($"\tNombre: {item2.Nombre} - Salario: {item2.Salario}");
                 }
             }
         }
