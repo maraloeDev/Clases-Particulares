@@ -53,11 +53,6 @@ namespace EjerciciosLinQ
         public MainWindow()
         {
             InitializeComponent();
- 
-        {
-           
-        }
-
         }
         private void Ejercicio1()
         {
@@ -108,7 +103,6 @@ Usa LINQ para calcular el total de ventas para cada cliente.
             }
 
         }
-
         private void Ejercicio3()
         {
             /* : Empresas con ventas superiores a cierta cantidad
@@ -154,7 +148,6 @@ Dada una empresa, calcula el dinero total de todas las ventas asociadas.
                 
             }
         }
-
         private void Ejercicio5()
         {
             /* : Clientes que han comprado en todas las empresas
@@ -182,16 +175,40 @@ Encuentra los clientes que han realizado al menos una compra en cada empresa.
         }
         private void Ejercicio6()
         {
-            throw new NotImplementedException();
+            /* : Empresas sin ventas
+Identifica las empresas que no han realizado ninguna venta.
+*/
+
+            var resultado = from NombreEmpresa in empresas
+                            where !ventas.Any(v=> v.EmpresaId== NombreEmpresa.EmpresaId)
+                            select new
+                            {
+                                EmpresaSinVenta = NombreEmpresa.Nombre
+                            };
+
+            lbresultadosListBox.Items.Clear();
+
+            foreach( var item in resultado) {
+                lbresultadosListBox.Items.Add($"Empresa {item.EmpresaSinVenta}");
+            }
         }
 
         private void Ejercicio7()
         {
-            throw new NotImplementedException();
+            /* Ventas por encima de la media
+Encuentra las ventas cuyos beneficios están por encima del promedio de todas las ventas.
+*/
+
+            var resultado = from ventasMedia in ventas.Average(media=>media.Monto ("media"))
+
         }
         private void Ejercicio8()
         {
-            throw new NotImplementedException();
+            /* Empresas que han vendido a un cliente específico
+Dado un cliente, encuentra las empresas a las que ha realizado compras.
+ */
+
+
         }
         private void Ejercicio9()
         {
@@ -210,7 +227,10 @@ Encuentra los clientes que han realizado al menos una compra en cada empresa.
             //Ejercicio2();
             //Ejercicio3();
             //Ejercicio4();
-            Ejercicio5();
+            //Ejercicio5();
+            //Ejercicio6();
+            //Ejercicio7();
+            Ejercicio8();
         }
     }
 }
