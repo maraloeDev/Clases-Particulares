@@ -134,12 +134,51 @@ Obtén una lista de empresas que tienen ventas totales superiores a 2250.
         }
         private void Ejercicio4()
         {
-            throw new NotImplementedException();
+            /* Monto total de ventas para una empresa específica
+Dada una empresa, calcula el dinero total de todas las ventas asociadas.
+ */
+
+            var resultado = from totalVentas in ventas
+                            join NombreEmpresa in empresas on totalVentas.EmpresaId equals NombreEmpresa.EmpresaId
+                            select new
+                            {
+                                Empresa = NombreEmpresa.Nombre,
+                                Total = ventas.Sum(v => v.Monto)
+                            };
+
+            lbresultadosListBox.Items.Clear();
+
+            foreach (var item in resultado)
+            {
+                lbresultadosListBox.Items.Add($"Empresa {item.Empresa} \n\t Ventas totales : {item.Total:C}");
+                
+            }
         }
 
         private void Ejercicio5()
         {
-            throw new NotImplementedException();
+            /* : Clientes que han comprado en todas las empresas
+Encuentra los clientes que han realizado al menos una compra en cada empresa.
+ */
+            var resultado = from compras in ventas
+                            join clients in clientes on compras.ClienteId equals clients.ClienteId
+                            join enterprise in empresas on compras.EmpresaId equals enterprise.EmpresaId
+                            where compras.EmpresaId == 1
+                            select new
+                            {
+                                Cliente = clients.Nombre,
+                                Empresa = enterprise.Nombre
+                            };
+
+            lbresultadosListBox.Items.Clear();
+
+            foreach (var item in resultado)
+            {
+
+                lbresultadosListBox.Items.Add($"Cliente: {item.Cliente}\n\t Empresa : {item.Empresa}");
+
+            }
+
         }
         private void Ejercicio6()
         {
@@ -169,7 +208,9 @@ Obtén una lista de empresas que tienen ventas totales superiores a 2250.
         {
             //Ejercicio1();
             //Ejercicio2();
-            Ejercicio3();
+            //Ejercicio3();
+            //Ejercicio4();
+            Ejercicio5();
         }
     }
 }
