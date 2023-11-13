@@ -40,7 +40,7 @@ namespace EjerciciosLinQ
 
         List<Venta> ventas = new List<Venta>
 {
-    new Venta { VentaId = 1, ClienteId = 1, EmpresaId = 1, Monto = 10000.50 },
+    new Venta { VentaId = 1, ClienteId = 1, EmpresaId = 1, Monto = 35000.50 },
     new Venta { VentaId = 2, ClienteId = 2, EmpresaId = 2, Monto = 7500.20 },
     new Venta { VentaId = 3, ClienteId = 1, EmpresaId = 3, Monto = 10000.75 },
     new Venta { VentaId = 4, ClienteId = 3, EmpresaId = 1, Monto = 15000.00 },
@@ -110,7 +110,7 @@ Obtén una lista de empresas que tienen ventas totales superiores a 2250.
  */
             var resultado = from listaEmpresas in empresas
                             join ventasTot in ventas on listaEmpresas.EmpresaId equals ventasTot.EmpresaId
-                            where ventasTot.Monto > 2250
+                            where ventasTot.Monto > 22500
                             select new
                             {
                                 Empresa = listaEmpresas.Nombre,
@@ -192,14 +192,13 @@ Identifica las empresas que no han realizado ninguna venta.
                 lbresultadosListBox.Items.Add($"Empresa {item.EmpresaSinVenta}");
             }
         }
-
         private void Ejercicio7()
         {
             /* Ventas por encima de la media
 Encuentra las ventas cuyos beneficios están por encima del promedio de todas las ventas.
 */
 
-            var resultado = from ventasMedia in ventas.Average(media=>media.Monto ("media"))
+            //var resultado = from ventasMedia in ventas.Average(media=>media.Monto ("media"))
 
         }
         private void Ejercicio8()
@@ -208,16 +207,71 @@ Encuentra las ventas cuyos beneficios están por encima del promedio de todas la
 Dado un cliente, encuentra las empresas a las que ha realizado compras.
  */
 
+            var resultado = from ventasCl in ventas
+                            join empresasV in empresas on ventasCl.EmpresaId equals empresasV.EmpresaId
+                            join clNombre in clientes on ventasCl.ClienteId equals clNombre.ClienteId
+                            where empresasV.Nombre == "Empresa A"
+                            select new
+                            {
+                                Nombre = empresasV.Nombre,
+                                Cliente = clNombre.Nombre
+                            };
 
+            lbresultadosListBox.Items.Clear();
+
+            foreach (var item in resultado)
+            {
+                lbresultadosListBox.Items.Add($"Empresa: {item.Nombre}\n\t Cliente : {item.Cliente}");
+            }
         }
         private void Ejercicio9()
         {
-            throw new NotImplementedException();
+            /* Cliente con más compras en una empresa específica
+Para una empresa dada, encuentra al cliente que ha realizado más compras.
+ */
+
+            var resultado = from lasCompras in empresas
+                            join losNames in ventas on lasCompras.EmpresaId equals losNames.VentaId
+                            join losVentas in clientes on losNames.ClienteId equals losVentas.ClienteId
+                            where ventas.Max(ma=>ma.Monto) == losNames.Monto
+                            select new
+                            {
+                                NombreCliente = losVentas.Nombre,
+                                Cantidad = losNames.Monto
+                            };
+
+            lbresultadosListBox.Items.Clear();
+
+            foreach (var item in resultado)
+            {
+                lbresultadosListBox.Items.Add($"Cliente {item.NombreCliente} \n\t Cantidad : {item.Cantidad:C}");
+
+            }
         }
 
         private void Ejercicio10()
         {
-            throw new NotImplementedException();
+            /*  : Empresas con al menos una venta grande
+Encuentra las empresas que tienen al menos una venta con un monto superior a 10000.
+*/
+
+            var resultado = from empresasGrande in empresas
+                            join ventasMax in ventas on empresasGrande.EmpresaId equals ventasMax.EmpresaId
+                            where ventas.Max(ma => ma.Monto) > 10000
+                            select new
+                            {
+                                NombreEmpresa = empresasGrande.Nombre,
+                                Cantidad = ventasMax.Monto
+                            };
+
+            lbresultadosListBox.Items.Clear();
+
+            foreach (var item in resultado)
+            {
+
+                lbresultadosListBox.Items.Add($"Empresa {item.NombreEmpresa} \t\n Venta : {item.Cantidad}");
+
+            }   
         }
 
 
@@ -230,7 +284,9 @@ Dado un cliente, encuentra las empresas a las que ha realizado compras.
             //Ejercicio5();
             //Ejercicio6();
             //Ejercicio7();
-            Ejercicio8();
+            //Ejercicio8();
+            //Ejercicio9();
+            Ejercicio10();
         }
     }
 }
