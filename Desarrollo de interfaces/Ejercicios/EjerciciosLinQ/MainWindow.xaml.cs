@@ -112,9 +112,24 @@ Usa LINQ para calcular el total de ventas para cada cliente.
         private void Ejercicio3()
         {
             /* : Empresas con ventas superiores a cierta cantidad
-Obtén una lista de empresas que tienen ventas totales superiores a 22500.
+Obtén una lista de empresas que tienen ventas totales superiores a 2250.
  */
+            var resultado = from listaEmpresas in empresas
+                            join ventasTot in ventas on listaEmpresas.EmpresaId equals ventasTot.EmpresaId
+                            where ventasTot.Monto > 2250
+                            select new
+                            {
+                                Empresa = listaEmpresas.Nombre,
+                                Ventas = ventasTot.Monto,
+                            };
 
+            lbresultadosListBox.Items.Clear();
+            foreach (var item in resultado)
+            {
+
+                lbresultadosListBox.Items.Add($"Empresa: {item.Empresa} \n\t Ventas Totales : {item.Ventas:C}");
+
+            }
 
         }
         private void Ejercicio4()
