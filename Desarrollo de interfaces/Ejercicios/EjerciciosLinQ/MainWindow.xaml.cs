@@ -263,15 +263,13 @@ Encuentra las empresas que tienen al menos una venta con un monto superior a 100
                                 NombreEmpresa = empresasGrande.Nombre,
                                 Cantidad = ventasMax.Monto
                             };
-
             lbresultadosListBox.Items.Clear();
 
             foreach (var item in resultado)
             {
+                lbresultadosListBox.Items.Add($"Empresa {item.Key.Cantidad}");
+            }
 
-                lbresultadosListBox.Items.Add($"Empresa {item.NombreEmpresa} \t\n Venta : {item.Cantidad}");
-
-            }   
         }
 
 
