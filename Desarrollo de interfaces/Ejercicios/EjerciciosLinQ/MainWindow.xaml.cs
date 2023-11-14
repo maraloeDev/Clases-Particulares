@@ -255,19 +255,15 @@ Para una empresa dada, encuentra al cliente que ha realizado más compras.
 Encuentra las empresas que tienen al menos una venta con un monto superior a 10000.
 */
 
-            var resultado = from empresasGrande in empresas
-                            join ventasMax in ventas on empresasGrande.EmpresaId equals ventasMax.EmpresaId
-                            where ventas.Max(ma => ma.Monto) > 10000
-                            select new
-                            {
-                                NombreEmpresa = empresasGrande.Nombre,
-                                Cantidad = ventasMax.Monto
-                            };
+            var resultado = from empresa in empresas
+                            join venta in ventas on empresa.EmpresaId equals venta.EmpresaId
+                            where venta.Monto >= ventas.Max(ma=>ma.Monto)
+                            select empresa.Nombre;
             lbresultadosListBox.Items.Clear();
 
             foreach (var item in resultado)
             {
-                lbresultadosListBox.Items.Add($"Empresa {item.Key.Cantidad}");
+                lbresultadosListBox.Items.Add($"Empresa {item}");
             }
 
         }
