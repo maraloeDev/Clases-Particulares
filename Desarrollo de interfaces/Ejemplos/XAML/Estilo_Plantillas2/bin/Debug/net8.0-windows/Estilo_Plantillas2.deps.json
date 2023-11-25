@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v8.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v8.0": {
+      "Estilo_Plantillas2/1.0.0": {
+        "runtime": {
+          "Estilo_Plantillas2.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Estilo_Plantillas2/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
