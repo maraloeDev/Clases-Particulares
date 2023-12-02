@@ -31,4 +31,12 @@ private Contador contador;
     public Thread getHilo() {
         return hilo;
     }
+
+    public Contador getContador() {
+        return contador;
+    }
+
+    public int getContadorP() {
+        return contadorP;
+    }
 }
