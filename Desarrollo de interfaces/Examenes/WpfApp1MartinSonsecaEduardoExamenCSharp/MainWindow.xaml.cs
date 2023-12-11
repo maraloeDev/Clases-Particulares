@@ -27,8 +27,6 @@ namespace WpfApp1MartinSonsecaEduardoExamenCSharp
             InitializeComponent();
             AniadorArticulo();
             lbArticulos.ItemsSource = articuloList;
-
-
         }
 
         public void AniadorArticulo()
@@ -40,7 +38,7 @@ namespace WpfApp1MartinSonsecaEduardoExamenCSharp
             articuloList.Add(new Articulo("Articulo 5", 25.20));
         }
 
-        public void LineNewEvent(Object sender, System.EventArgs e)
+        public void LineNewEvent(Object sender, EventArgs e)
         {
             lbTicket.Items.Clear();
             lbTicket.Items.Add(ticket.Linea);
