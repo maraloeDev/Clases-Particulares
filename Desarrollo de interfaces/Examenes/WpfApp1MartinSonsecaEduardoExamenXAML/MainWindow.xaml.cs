@@ -27,7 +27,22 @@ namespace WpfApp1MartinSonsecaEduardoExamenXAML
             Datos.RecuperarArticulos();
             lbDatos.ItemsSource = Datos.Articulos;
             labelRef.Content = Datos.Articulos[0].Referencia;
+            labelPrecio.Content = Datos.Articulos[0].Precio + "€";
         }
 
+        private void lbDatos_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+
+            foreach (var item in Datos.Articulos)
+            {
+
+                if (lbDatos.SelectedItem.ToString() == item.ToString())
+                {
+                    labelRef.Content = item.Referencia;
+                    labelPrecio.Content = item.Precio + "€";
+                }
+                
+            }
+        }
     }
 }

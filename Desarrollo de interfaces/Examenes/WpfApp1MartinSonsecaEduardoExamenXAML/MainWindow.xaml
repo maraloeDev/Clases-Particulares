@@ -39,18 +39,42 @@
             </Setter>
             <Style.Triggers>
                 <Trigger Property="IsMouseOver" Value="True">
-                    <!--<Setter Property="RenderTransform">
-    <Setter.Value>
-
-        <ScaleTransform ScaleX="1.2" ScaleY="1.2" CenterX="25" CenterY="25"></ScaleTransform>
-        <BeginStoryboard>
-            <Storyboard>
-                <DoubleAnimation Storyboard.TargetProperty= "ScaleX" From="1" To="1.2" Duration="0:0:0.2"></DoubleAnimation>
-            </Storyboard>
-        </BeginStoryboard>
-    </Setter.Value>
-</Setter>-->
+                    <Setter Property="RenderTransform">
+                        <Setter.Value>
+                            <ScaleTransform ScaleX="1.2" ScaleY="1.2" CenterX="25" CenterY="25"></ScaleTransform>
+                        </Setter.Value>
+                    </Setter>
+                    
                     <Setter Property="Background" Value="LightBlue"></Setter>
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+
+        <Style x:Key="liistItem" TargetType="ListBoxItem">
+
+            <Setter Property="Width" Value="165"></Setter>
+            <Setter Property="Height" Value="25"></Setter>
+            <Setter Property="Background" Value="LightCoral"></Setter>
+            <Setter Property="HorizontalAlignment" Value="Center"></Setter>
+            <Setter Property="Margin" Value="0,20,0,0"></Setter>
+            <Setter Property="BorderBrush" Value="Transparent"></Setter>
+            <Setter Property="Foreground" Value="Green"></Setter>
+                <Setter Property="Template">
+                <Setter.Value>
+                    <ControlTemplate TargetType="ListBoxItem">
+                        <Border BorderThickness="1" CornerRadius="1" BorderBrush="{TemplateBinding BorderBrush}" Background="{TemplateBinding Background}">
+
+                            <ContentPresenter HorizontalAlignment="Center" VerticalAlignment="Center"></ContentPresenter>
+                        </Border>
+                    </ControlTemplate>
+                </Setter.Value>
+            </Setter>
+
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="BorderBrush" Value="Green"></Setter>
+                    <Setter Property="Background" Value="LightBlue"></Setter>
+
                 </Trigger>
             </Style.Triggers>
         </Style>
@@ -62,14 +86,16 @@
         <Grid Width="200" Height="400" Margin="5" VerticalAlignment="Top" HorizontalAlignment="Left">
 
             <Image Source="./Imagenes/Samsung-970-EVO.jpg" Width="500" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"></Image>
-        <ListBox x:Name="lbDatos" Background="Transparent" Width="200" Height="400" VerticalAlignment="Top" HorizontalAlignment="Left"></ListBox>
+            <ListBox x:Name="lbDatos" Background="Transparent" Width="200" Height="400" VerticalAlignment="Top" HorizontalAlignment="Left" ItemContainerStyle="{StaticResource liistItem}" SelectionChanged="lbDatos_SelectionChanged">
+
+            </ListBox>
         </Grid>
 
         <StackPanel Orientation="Vertical" Margin="10" HorizontalAlignment="Right" Width="250" Height="400" VerticalAlignment="Top">
 
-            <Image Source="./Imagenes/Samsung-970-EVO.jpg" Width="200" Height="200" Margin="20"></Image>
+            <Image x:Name="imgCambio" Source="./Imagenes/Samsung-970-EVO.jpg" Width="200" Height="200" Margin="20"></Image>
             <Label x:Name="labelRef" Background="Gray" Foreground="White" FontWeight="Bold" FontSize="16" Height="30" Width="220"></Label>
-            <Label Foreground="Red" Height="80" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center">sdc</Label>
+            <Label x:Name="labelPrecio" Foreground="Red" Height="80" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center">sdc</Label>
         </StackPanel>
         <Border Style="{StaticResource borderInferior}">
 
