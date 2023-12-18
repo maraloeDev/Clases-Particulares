@@ -16,16 +16,20 @@ namespace WpfApp1MartinSonsecaEduardoExamenXAML
     /// </summary>
     public partial class MainWindow : Window
     {
+        public static string RutaImg =  "pack://application:,,,/WpfApp1MartinSonsecaEduardoExamenXAML;component/";
         public MainWindow()
         {
             InitializeComponent();
             Recuperar();
         }
 
+
         private void Recuperar() 
         {
             Datos.RecuperarArticulos();
             lbDatos.ItemsSource = Datos.Articulos;
+            imagenlb.Source = new BitmapImage(new Uri(RutaImg + Datos.Articulos[0].Imagen));
+            imgCambio.Source = new BitmapImage(new Uri(RutaImg + Datos.Articulos[0].Imagen));
             labelRef.Content = Datos.Articulos[0].Referencia;
             labelPrecio.Content = Datos.Articulos[0].Precio + "€";
         }
@@ -40,9 +44,13 @@ namespace WpfApp1MartinSonsecaEduardoExamenXAML
                 {
                     labelRef.Content = item.Referencia;
                     labelPrecio.Content = item.Precio + "€";
+                    imgCambio.Source = new BitmapImage(new Uri(item.Imagen, UriKind.Relative));
+                    imagenlb.Source = new BitmapImage(new Uri(RutaImg + item.Imagen));
                 }
                 
             }
         }
+
+
     }
 }

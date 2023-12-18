@@ -19,3 +19,8 @@ C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\Wpf
 C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\obj\Debug\net7.0-windows\WpfApp1MartinSonsecaEduardoExamenXAML.pdb
 C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\obj\Debug\net7.0-windows\WpfApp1MartinSonsecaEduardoExamenXAML.genruntimeconfig.cache
 C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\obj\Debug\net7.0-windows\ref\WpfApp1MartinSonsecaEduardoExamenXAML.dll
+C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\bin\Debug\net7.0-windows\Imagenes\Samsung-970-EVO.jpg
+C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\bin\Debug\net7.0-windows\Imagenes\sdram ddr4.jpg
+C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\bin\Debug\net7.0-windows\Imagenes\ssd.jpg
+C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\bin\Debug\net7.0-windows\Imagenes\intel i7.png
+C:\Users\marti\Desktop\Clases-Particulares\Desarrollo de interfaces\Examenes\WpfApp1MartinSonsecaEduardoExamenXAML\obj\Debug\net7.0-windows\WpfApp1MartinSonsecaEduardoExamenXAML_Content.g.cs

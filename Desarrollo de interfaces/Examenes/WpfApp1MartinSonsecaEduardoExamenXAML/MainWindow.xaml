@@ -85,7 +85,7 @@
 
         <Grid Width="200" Height="400" Margin="5" VerticalAlignment="Top" HorizontalAlignment="Left">
 
-            <Image Source="./Imagenes/Samsung-970-EVO.jpg" Width="500" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"></Image>
+            <Image x:Name="imagenlb" Source="./Imagenes/Samsung-970-EVO.jpg" Width="500" Height="500" HorizontalAlignment="Center" VerticalAlignment="Center" Opacity="0.5"></Image>
             <ListBox x:Name="lbDatos" Background="Transparent" Width="200" Height="400" VerticalAlignment="Top" HorizontalAlignment="Left" ItemContainerStyle="{StaticResource liistItem}" SelectionChanged="lbDatos_SelectionChanged">
 
             </ListBox>
@@ -93,9 +93,9 @@
 
         <StackPanel Orientation="Vertical" Margin="10" HorizontalAlignment="Right" Width="250" Height="400" VerticalAlignment="Top">
 
-            <Image x:Name="imgCambio" Source="./Imagenes/Samsung-970-EVO.jpg" Width="200" Height="200" Margin="20"></Image>
+            <Image x:Name="imgCambio" Source="./Imagenes/Samsung-970-EVO.jpg"  Width="200" Height="200" Margin="20"></Image>
             <Label x:Name="labelRef" Background="Gray" Foreground="White" FontWeight="Bold" FontSize="16" Height="30" Width="220"></Label>
-            <Label x:Name="labelPrecio" Foreground="Red" Height="80" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center">sdc</Label>
+            <Label x:Name="labelPrecio" Foreground="Red" Height="80" FontSize="50" FontWeight="Bold" HorizontalAlignment="Center"></Label>
         </StackPanel>
         <Border Style="{StaticResource borderInferior}">
 
