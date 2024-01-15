@@ -9,6 +9,12 @@ public class Agenda {
     static Scanner scanner = new Scanner(System.in);
     static ArrayList<Contactos> contactos = new ArrayList<Contactos>();
 
+    public static void main(String[] args) {
+
+        menu();
+        submenu();
+    }
+
     public static void menu() {
         int opcion;
 
@@ -42,26 +48,23 @@ public class Agenda {
                     submenu();
                     break;
                 case 3:
-                    System.out.println("Introduce el nuevo nombre");
+                    System.out.println("Introduce el id: ");
+                    int id = scanner.nextInt();
+                    scanner.nextLine();
 
+                    System.out.println("Introduce el nuevo nombre");
                     String nuevoNombre = scanner.nextLine();
 
                     System.out.println("Introduce el nuevo telefono");
                     int nuevoTelefono = scanner.nextInt();
 
-                    Contactos contactoMod = new Contactos(nuevoNombre, nuevoTelefono);
-                    modificarContacto(contactoMod);
+                    modificarContacto(id, nuevoNombre, nuevoTelefono);
                     break;
                 case 4:
                     System.out.println("Introduce el nombre a eliminar");
-
                     String eliminarNombre = scanner.nextLine();
 
-                    System.out.println("Introduce el telefono a eliminar");
-                    int eliminarTelefono = scanner.nextInt();
-
-                    Contactos contactoEliminado = new Contactos(eliminarNombre, eliminarTelefono);
-                    eliminarContacto(contactoEliminado);
+                    eliminarContacto(eliminarNombre);
                     break;
                 case 5:
                     listarContactos();
@@ -72,7 +75,6 @@ public class Agenda {
                 default:
                     System.out.println("Opcion no valida");
             }
-            System.exit(0);
         } while (opcion != 6);
     }
 
@@ -110,12 +112,6 @@ public class Agenda {
         } while (opcionSm != 3);
     }
 
-    public static void main(String[] args) {
-
-        menu();
-        submenu();
-    }
-
     public static void anadirContacto(Contactos c) {
 
         boolean encontradoNombre = false;
@@ -123,16 +119,23 @@ public class Agenda {
         for (Contactos item : contactos) {
             if (item.getNombre().equalsIgnoreCase(c.getNombre())) {
                 encontradoNombre = true;
+            } else{
+                System.out.println("Contacto repetido");
+                break;
             }
 
             if (item.getTelefono() == (c.getTelefono())) {
 
                 encontradoTelefono = true;
+            } else{
+                System.out.println("Contacto repetido");
+                break;
             }
         }
         if (!encontradoNombre && !encontradoTelefono) {
             contactos.add(c);
             System.out.println("Contacto creado");
+
         }
 
     }
@@ -144,13 +147,13 @@ public class Agenda {
 
             if (contactosBuscar.getNombre().equalsIgnoreCase(nombre)) {
 
-                System.out.println("Contacto encontrado: " + contactos);
+                System.out.println("Contacto encontrado: " + contactosBuscar.getNombre() + " " + contactosBuscar.getTelefono());
                 encontrado = true;
                 break;
             }
         }
 
-        if (encontrado) {
+        if (!encontrado) {
             System.out.println("Contacto no encontrado");
         }
     }
@@ -162,22 +165,22 @@ public class Agenda {
 
             if (contactosBuscar.getTelefono() == (telefono)) {
 
-                System.out.println("Contacto encontrado: " + contactos);
+                System.out.println("Contacto encontrado: " + contactosBuscar.getNombre() + " " + contactosBuscar.getTelefono());
                 encontrado = true;
                 break;
             }
         }
-        if (encontrado) {
+        if (!encontrado) {
             System.out.println("Contacto no encontrado");
         }
     }
 
-    public static void modificarContacto(Contactos c) {
+    public static void modificarContacto(int id ,String nombre ,int telefono) {
 
         for (Contactos contactosModificar : contactos) {
-            if (!contactosModificar.getNombre().equalsIgnoreCase(c.getNombre())) {
-                contactosModificar.setNombre(c.getNombre());
-                contactosModificar.setTelefono(c.getTelefono());
+            if (contactosModificar.getId()==id) {
+                contactosModificar.setNombre(nombre);
+                contactosModificar.setTelefono(telefono);
                 System.out.println("Contacto modificado correctamente");
                 break;
             }
@@ -185,9 +188,9 @@ public class Agenda {
 
     }
 
-    public static void eliminarContacto(Contactos c) {
+    public static void eliminarContacto(String nombre) {
         for (Contactos contactosEliminar : contactos) {
-            if (contactosEliminar.getNombre().equalsIgnoreCase(c.getNombre())) {
+            if (contactosEliminar.getNombre().equalsIgnoreCase(nombre)) {
                 contactos.remove(contactosEliminar);
                 System.out.println("Contacto eliminado correctamente");
                 break;
