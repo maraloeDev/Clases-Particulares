@@ -1,4 +1,4 @@
-package Ejercicio1;
+package Examen1.Problema1;
 
 public class Contador {
 

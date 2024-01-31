@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("EjerciciosLinQ")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+684f43e3f965c3f1021f84267f7bbaed655d436e")]
 [assembly: System.Reflection.AssemblyProductAttribute("EjerciciosLinQ")]
 [assembly: System.Reflection.AssemblyTitleAttribute("EjerciciosLinQ")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

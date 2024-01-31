@@ -1,11 +1,11 @@
-package Ejercicio1;
+package Examen2.Problema1;
 
 public class Contador {
 
     private int contador;
 
-    public Contador(int contador){
-        this.contador=contador;
+    public Contador(int contador) {
+        this.contador = contador;
     }
 
     public int getContador() {

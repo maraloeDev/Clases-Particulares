@@ -1,4 +1,4 @@
-package Ejercicio2;
+package Examen2.Problema2;
 
 
 public class Proceso implements Runnable {
