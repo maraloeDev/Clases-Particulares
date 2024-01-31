@@ -15,11 +15,7 @@ public class App {
         for (int i = 0; i <= 100; i++) {
             aleatorio = random.nextInt(0, 20);
             if (aleatorio == 10) {
-                synchronized (proceso) {
-
-                    proceso.getHilo().notify(); //Se notifica que se ha encontrado un numero
-                }
-
+proceso.notificar();
             }
             System.out.println(aleatorio);
 

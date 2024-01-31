@@ -8,18 +8,13 @@ public class Proceso implements Runnable {
     public void run() {
 
         while (!this.hilo.isInterrupted()) {
-            try {
-                System.out.println("JA");
-                getHilo().wait();
-            } catch (InterruptedException e) {
-                throw new RuntimeException(e);
-            }
 
-            contador.setContador(contador.getContador() + 1);
-        System.out.println("Se ha encontrado otro 10");
+
+                esperar();
+
+                System.out.println("Se ha encontrado otro 10");
+            contador.incrementar();
         }
-
-       // this.getHilo().notify();
     }
 
     Thread hilo;
@@ -44,5 +39,18 @@ public class Proceso implements Runnable {
 
     public void setHilo(Thread hilo) {
         this.hilo = hilo;
+    }
+
+    public synchronized void esperar() {
+
+        try {
+            wait();
+        } catch (InterruptedException e) {
+        }
+
+    }
+
+    public synchronized void notificar(){
+        notify();
     }
 }

@@ -1,4 +1,4 @@
-package Examen2.Problema2;
+package ExamenRecuperacion;
 
 public class Contador {
 
@@ -12,11 +12,7 @@ public class Contador {
         return contador;
     }
 
-    public void  setContador(int contador) {
+    public void setContador(int contador) {
         this.contador = contador;
-    }
-
-    public synchronized void incrementar(){ //Se pone sync para que lo puedan llanar a varios procesos
-            contador++;
     }
 }
